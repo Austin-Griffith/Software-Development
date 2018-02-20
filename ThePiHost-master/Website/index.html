@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>THE PI HOST</title>
+	<meta name="author" content="Caroline Friedman, Austin Griffith" />
+	<meta name="description" content="CSCI 3308, The Pi Host | Hosting games through Raspberry Pi" />
+
+	<!-- stylesheets -->
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	<!-- scripts -->
+	<script src="https://use.fontawesome.com/70898ca73d.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="scripts/scrolloverflow.js"></script>
+	<script type="text/javascript" src="scripts/jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#fff', '#fff', '#fff', '#fff' ]
+			});
+		});
+	</script>
+</head>
+
+<body>
+<!-- <div id="backToTop"><a href="#home"><i class="fa fa-arrow-up" aria-hidden="true"></i></a></div> -->
+<div id="fullpage">
+	<div class="section active" id="home">
+		<img src="assets/pi logo.png"/>
+		<h1><a href="#about">The Pi Host</a></h1>
+	</div>
+	<div class="section" id="about">
+	  <div class="slide active">
+			<div class="content">
+				<p>Bringing</p> <p id="retro"><a href="#games">retro games</a></p> <p>back to life for anyone, any time, anywhere.<br><br/></p>
+				<p id="vision-statement">Because the best games are free.</p>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="games">
+		<div class="slide active"><h1>Games</h1></div>
+	  <div class="slide"><img src="assets/game-screenshots/pong-game.png"/></div>
+	  <div class="slide"><img src="assets/game-screenshots/space-invaders-game.png"/></div>
+	  <div class="slide"><img src="assets/game-screenshots/mario-party-3.png"/></div>
+	  <div class="slide"><img src="assets/game-screenshots/mario-kart.png"/></div>
+	  <div class="slide"><img src="assets/game-screenshots/super-smash-bros.png"/></div>
+	</div>
+	<div class="section" id="section3">
+	<a class="download" href="#popup">Download</a>
+	<div id="popup" class="overlay">
+		<div class="popup">
+			<a class="close" href="#">×</a>
+			<h2>Instructions:</h2>
+			<div class="linkSlider"> 
+				<h2 class="linkHeading">How to download</h2>
+				<div class="linkExpand"> 
+				<ol>
+					<li>Download and decompress the package</li>
+					<li>Double click "ThePiHostLauncher.jar"</li>
+					<li>Enjoy!</li>
+				</ol>
+				</div>
+			</div>
+			<div class="linkSlider"> 
+				<h2 class="linkHeading">How to play emulated games</h2>
+				<div class="linkExpand"> 
+				<ol>
+					<li>Follow download instructions above.</li>
+					<li>Locate the "emulator" folder</li>
+					<li>Launch "OpenEmu" application</li>
+					<li>With application running, locate "Emulated Games" folder</li>
+					<li>Drag and drop the games of your choice into OpenEmu</li>
+				</ol>
+				</div>
+		</div>
+			<div id="download"><a href="assets/ThePiHostApp.tar.gz" download>Proceed to download</a></div>
+		</div>
+	</div>
+	</div>
+	<div class="section" id="credits">
+			<h2>Our Team: </h2>
+			<p class="team">Caroline Friedman</p>
+			<p class="team">Austin Griffith</p>
+			<p class="team">Josh Griffiths</p>
+			<p class="team">Galen Pogoncheff</p>
+			<img src="assets/nintendo-64.png"/>
+			<img src="assets/pong.png"/>
+			<img src="assets/space-invaders.png"/>
+	</div>
+</div>
+</body>
+<script type="text/javascript"> 
+	$(document).ready(function() { 
+		$(".linkExpand").hide(); 
+		$(".linkHeading").click(function() { 
+			$(this).next(".linkExpand").slideToggle('fast'); 
+		}); 
+	}); 
+</script> 
+</html>
